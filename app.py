@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 import requests
 
 app = Flask(__name__)
@@ -10,7 +10,8 @@ def home():
 @app.route('/callAI', methods=['GET'])
 def call_ai():
     # Here you would add the logic to handle the AI call
-    message = calln8n("Hello")
+    message = request.args.get("message")
+    message = calln8n(message)
     return jsonify({"message": message["output"]})
 
 def calln8n(prompt):

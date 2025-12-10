@@ -278,7 +278,7 @@
             // }, 1000);
 
             // 呼叫後端API取得AI回覆
-            fetch('/callAI')
+            fetch('/callAI?message=' + encodeURIComponent(message))
                 .then(response => response.json())
                 .then(data => {
                     addMessage(data.message, 'assistant');
