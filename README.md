@@ -26,8 +26,9 @@ pip install flask
 2. index.html
 控制畫面
 
-- [不含css的畫面會像](source\不含css功能畫面.png)
+- ![不含css的畫面會像](source\不含css功能畫面.png)
 
+- 注意 html上的id, 只能有一個,超過會容易出錯
 
 # call api 
 
